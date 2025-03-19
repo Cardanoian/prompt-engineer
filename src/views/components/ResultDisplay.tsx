@@ -1,13 +1,10 @@
 interface ResultDisplayProps {
-	result: string;
+  result: string;
 }
 
 export const ResultDisplay: React.FC<ResultDisplayProps> = ({ result }) =>
-	result ? (
-		<div
-			className='w-full p-4 rounded-lg border-2 min-h-[200px]'
-			style={{ borderColor: '#304d4e' }}
-		>
-			<pre className='whitespace-pre-wrap'>{result}</pre>
-		</div>
-	) : null;
+  result ? (
+    <div className='overflow-y-auto p-4 rounded-lg border-2 min-h-[200px] border-tealCustom max-h-64 sm:max-h-80 md:max-h-96 lg:max-h-[30rem] xl:max-h-[35rem]'>
+      <div className='whitespace-pre-wrap text-base'>{result}</div>
+    </div>
+  ) : null;
