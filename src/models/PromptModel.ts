@@ -14,7 +14,7 @@ export class PromptModel {
 	async improvePrompt(userPrompt: string): Promise<string> {
 		try {
 			const response = await this.openai.chat.completions.create({
-				model: 'gpt-4o',
+				model: 'gpt-4.1',
 				messages: [
 					{
 						role: 'system',
